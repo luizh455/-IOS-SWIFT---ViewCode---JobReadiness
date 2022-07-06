@@ -24,8 +24,8 @@ class MeliApiService {
         return headers
     }
     
-    func predictCategory(product : String, completion: @escaping (PredictedCategory) -> Void){
-       var customProduct = product
+    func predictCategory(product : String, onError : @escaping () -> Void, completion: @escaping (PredictedCategory) -> Void){
+        var customProduct = product
         customProduct = product.replacingOccurrences(of: " ", with: "+")
         alamofireAPIClient.get(url: predictBaseUrl+customProduct, customHeader: getAuthHeader()) { result in
             switch result {
@@ -34,16 +34,27 @@ class MeliApiService {
                     if let data = data {
                         let predictedCategory = try
                         JSONDecoder().decode(predictedCategoryElement.self, from: data)
-                        predictedCategory.isEmpty ? print("invalid search text") : completion(predictedCategory[0])
+                        if(predictedCategory.isEmpty)
+                        {
+                            onError()
+                            print("error predict")
+                            
+                        }
+                        else {
+                            completion(predictedCategory[0])
+                            
+                        }
                     }
                 }
                 catch
                 {
+                    onError()
                     print("catch predict \(error)")
                 }
                 
             case .failure:
                 print("failure predict")
+                onError()
             }
         }
         

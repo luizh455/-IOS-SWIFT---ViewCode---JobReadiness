@@ -42,23 +42,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    func addComponents(){
+    private func addComponents(){
         configureSearchBar()
         view.addSubview(tableView)
     }
     
-    func configureSearchBar() {
+    private func configureSearchBar() {
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         searchController.searchBar.isTranslucent = false
         searchController.searchBar.isHidden = false
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Buscar en Mercado Libre"
-//        searchController.searchBar.barTintColor = .systemYellow
-//        searchController.searchBar.backgroundColor = .systemYellow
         navigationItem.hidesSearchBarWhenScrolling = false
-
-        
     }
  
     
@@ -76,7 +72,7 @@ extension HomeViewController  {
         }
         homeController.getProducts(product: text, completion: {
             self.tableView.reloadData()
-        })
+        }, onError: getOnError())
     }
 }
 
@@ -93,7 +89,7 @@ extension HomeViewController {
         guard let productList = homeController.productList else {
             return UITableViewCell()
         }
-     
+        cell.selectionStyle = .none
         cell.configure(imageName: productList[indexPath.row].body.pictures[0]?.url ?? "",
                        titleLabel: productList[indexPath.row].body.title ?? "",
                        subtitleLabel: "",
@@ -124,16 +120,11 @@ extension HomeViewController {
         
         let price = product.body.price ?? 0
         
-        //let description = product.body.title
 
         let productDetailView = (DetailViewController(titleA: product.body.title ?? "", image: picture?.url ?? "", price: String(price) ,  description: ""))
         
         navigationController?.pushViewController(productDetailView, animated: true)
         
-//        productDetailView.modalPresentationStyle = .fullScreen
-//
-//        present(productDetailView, animated: true)
-    }
-    
+    }   
     
 }

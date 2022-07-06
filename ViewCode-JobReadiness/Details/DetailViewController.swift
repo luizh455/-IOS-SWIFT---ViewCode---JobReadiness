@@ -9,18 +9,18 @@ import UIKit
 
 class DetailViewController: UIViewController, UINavigationBarDelegate {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     
-    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet private weak var productImage: UIImageView!
     
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
-    var titleProd : String
-    var imageProd : String
-    var priceProd : String
-    var descriptionProd : String
+    private var titleProd : String
+    private var imageProd : String
+    private var priceProd : String
+    private var descriptionProd : String
     
     @IBAction func onPressBackButton(_ sender: Any) {
         self.dismiss(animated: true)

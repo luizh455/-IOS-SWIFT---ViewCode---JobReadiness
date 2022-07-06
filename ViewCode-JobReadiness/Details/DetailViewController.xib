@@ -22,80 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EE3-nd-21F" userLabel="Nav Stack View">
-                    <rect key="frame" x="0.0" y="44" width="390" height="80"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xd-jS-by8">
-                            <rect key="frame" x="0.0" y="0.0" width="390" height="31"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tap-h1-sTr">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="GGL-Lx-GKp"/>
-                                    </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
-                                    <connections>
-                                        <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="81P-oI-VOQ"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EL-eU-o3r">
-                                    <rect key="frame" x="50" y="0.0" width="190" height="31"/>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title=" "/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V4-fX-HSS">
-                                    <rect key="frame" x="240" y="0.0" width="50" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="6sQ-Z9-uaa"/>
-                                    </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-wa-1gq">
-                                    <rect key="frame" x="290" y="0.0" width="50" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="EGG-Cc-yNr"/>
-                                    </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luG-1g-HDl">
-                                    <rect key="frame" x="340" y="0.0" width="50" height="31"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="Y2Z-He-lfH"/>
-                                    </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemYellowColor"/>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vc3-FW-jBz">
-                            <rect key="frame" x="0.0" y="31" width="390" height="49"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1a-nd-zu2">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
-                                    <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="location" catalog="system" title="Enviar a nombre de usuario - Direccion &gt;"/>
-                                </button>
-                            </subviews>
-                            <color key="tintColor" systemColor="systemYellowColor"/>
-                        </stackView>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="ucE-aF-4qS"/>
-                    </constraints>
-                </stackView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpj-JU-kaJ">
-                    <rect key="frame" x="0.0" y="124" width="390" height="686"/>
+                    <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-Zz-z25">
                             <rect key="frame" x="0.0" y="0.0" width="390" height="858.66666666666663"/>
@@ -210,32 +138,19 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kpj-JU-kaJ" secondAttribute="bottom" id="7Ua-l6-kra"/>
-                <constraint firstItem="Kpj-JU-kaJ" firstAttribute="top" secondItem="EE3-nd-21F" secondAttribute="bottom" id="CUs-O2-uf3"/>
                 <constraint firstItem="Kpj-JU-kaJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HZc-0f-ufg"/>
-                <constraint firstItem="EE3-nd-21F" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Okx-bo-tRd"/>
+                <constraint firstItem="Kpj-JU-kaJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Owa-z2-X28"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kpj-JU-kaJ" secondAttribute="trailing" id="owP-CO-hPH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EE3-nd-21F" secondAttribute="trailing" id="s0b-Jo-3Fi"/>
-                <constraint firstItem="EE3-nd-21F" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xfW-tG-mZG"/>
             </constraints>
             <point key="canvasLocation" x="130.76923076923077" y="81.042654028436019"/>
         </view>
     </objects>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="carro" width="540" height="540"/>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="location" catalog="system" width="128" height="118"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="wave.3.right" catalog="system" width="83" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

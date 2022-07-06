@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class ProductCell: UITableViewCell {
+final class ProductCell: UITableViewCell {
     static let identifier = "ProductCell"
-    var favProdId : String = ""
+    private var favProdId : String = ""
     
     private let _favoriteButton : UIButton = {
         let _favoriteButton = UIButton()
@@ -75,6 +75,7 @@ class ProductCell: UITableViewCell {
         _priceLabel.text = ""
         _adressLabel.text = ""
         _subtitleLabel.text = ""
+        _favoriteButton.setImage(UIImage(systemName:"heart" ), for: .normal)
         
     }
     
@@ -100,7 +101,7 @@ class ProductCell: UITableViewCell {
         
     }
     
-    func changeFavoriteButton(){
+    private func changeFavoriteButton(){
         let isFavorite = _favoriteButton.imageView?.restorationIdentifier == "heart.fill"
         let defaults = UserDefaults.standard
         if(!isFavorite)
@@ -113,11 +114,11 @@ class ProductCell: UITableViewCell {
         else{
             _favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
             _favoriteButton.imageView?.restorationIdentifier = "heart"
-            defaults.removeObject(forKey: favProdId)
+            defaults.set(false, forKey: favProdId)
         }
     }
     
-    func loadImage(url: URL) {
+    private func loadImage(url: URL) {
             DispatchQueue.main.async { [weak self] in
                 if let data = try? Data(contentsOf: url) {
                     if let image = UIImage(data: data) {

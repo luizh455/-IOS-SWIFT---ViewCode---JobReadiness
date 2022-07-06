@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HomeController {
+final class HomeController {
     private let api = MeliApiService()
     private var topCategory : TopCategory?
     var productList : ProductList?
@@ -18,17 +18,14 @@ class HomeController {
     
     
     
-    func getProducts(product : String, completion: @escaping () -> Void) {
-        api.predictCategory(product: product) { result in
+    func getProducts(product : String, completion: @escaping () -> Void, onError : @escaping () -> Void) {
+        api.predictCategory(product: product, onError: onError) { result in
             self.api.getTopProducts(categoryID: result.categoryID) { result in
                 self.topCategory = result
                 self.api.getItemListInfo(idList: result.content) { result in
                     self.productList = result
-                    print(result)
                     completion()
                     self.debugProducts()
-                    
-                    print("eita")
                 }
             }
         }

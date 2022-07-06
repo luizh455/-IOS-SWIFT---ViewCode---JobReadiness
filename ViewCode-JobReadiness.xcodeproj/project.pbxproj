@@ -14,7 +14,6 @@
 		29AE111E28725CF1001648E2 /* ViewCode_JobReadinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE111D28725CF1001648E2 /* ViewCode_JobReadinessTests.swift */; };
 		29AE112828725CF1001648E2 /* ViewCode_JobReadinessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE112728725CF1001648E2 /* ViewCode_JobReadinessUITests.swift */; };
 		29AE112A28725CF1001648E2 /* ViewCode_JobReadinessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE112928725CF1001648E2 /* ViewCode_JobReadinessUITestsLaunchTests.swift */; };
-		29AE113728725D81001648E2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE113628725D81001648E2 /* SearchViewController.swift */; };
 		29AE113C28726EAD001648E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE113B28726EAD001648E2 /* HomeView.swift */; };
 		29AE113F28733013001648E2 /* AlamofireAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AE113E28733013001648E2 /* AlamofireAPIClient.swift */; };
 		29AE1142287352B7001648E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 29AE1141287352B7001648E2 /* Alamofire */; };
@@ -60,7 +59,6 @@
 		29AE112328725CF1001648E2 /* ViewCode-JobReadinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ViewCode-JobReadinessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29AE112728725CF1001648E2 /* ViewCode_JobReadinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode_JobReadinessUITests.swift; sourceTree = "<group>"; };
 		29AE112928725CF1001648E2 /* ViewCode_JobReadinessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode_JobReadinessUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		29AE113628725D81001648E2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		29AE113B28726EAD001648E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		29AE113E28733013001648E2 /* AlamofireAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIClient.swift; sourceTree = "<group>"; };
 		29AE114628735531001648E2 /* MeliApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliApiService.swift; sourceTree = "<group>"; };
@@ -127,13 +125,12 @@
 			children = (
 				29AE1156287394B7001648E2 /* Mock */,
 				29AE11512873945E001648E2 /* Favorites */,
-				29AE114828735547001648E2 /* model */,
+				29AE114828735547001648E2 /* Models */,
 				29AE113D28732FEC001648E2 /* Services */,
 				29AE113A28726E77001648E2 /* Home */,
 				29AE11612874D06F001648E2 /* Details */,
 				29AE110828725CEF001648E2 /* SceneDelegate.swift */,
 				29AE110628725CEF001648E2 /* AppDelegate.swift */,
-				29AE113628725D81001648E2 /* SearchViewController.swift */,
 				29AE110F28725CF1001648E2 /* Assets.xcassets */,
 				29AE111128725CF1001648E2 /* LaunchScreen.storyboard */,
 				29AE111428725CF1001648E2 /* Info.plist */,
@@ -177,14 +174,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		29AE114828735547001648E2 /* model */ = {
+		29AE114828735547001648E2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				29AE11492873555D001648E2 /* PredictedCategory.swift */,
 				29AE114B28735579001648E2 /* TopCategory.swift */,
 				29AE11572873AC34001648E2 /* Product.swift */,
 			);
-			path = model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		29AE11512873945E001648E2 /* Favorites */ = {
@@ -358,7 +355,6 @@
 				29AE114A2873555D001648E2 /* PredictedCategory.swift in Sources */,
 				29AE11642874F1B9001648E2 /* DetailViewController.swift in Sources */,
 				29AE110728725CEF001648E2 /* AppDelegate.swift in Sources */,
-				29AE113728725D81001648E2 /* SearchViewController.swift in Sources */,
 				29AE11502873940B001648E2 /* HomeController.swift in Sources */,
 				29AE110928725CEF001648E2 /* SceneDelegate.swift in Sources */,
 				29AE113C28726EAD001648E2 /* HomeView.swift in Sources */,

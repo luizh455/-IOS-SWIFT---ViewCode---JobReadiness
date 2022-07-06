@@ -13,47 +13,44 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        /// 1. Capture the scene
+        
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let tabBarVc = UITabBarController()
+        let tabBarViewController = UITabBarController()
         
-        let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: FavoritesViewController())
-        let vc3 = UINavigationController(rootViewController: EmptyViewController())
-        let vc4 = UINavigationController(rootViewController: EmptyViewController())
-        let vc5 = UINavigationController(rootViewController: EmptyViewController())
+        let homeViewController = UINavigationController(rootViewController: HomeViewController())
+        let favoritesViewController = UINavigationController(rootViewController: FavoritesViewController())
+        let shopsViewController = UINavigationController(rootViewController: EmptyViewController())
+        let notificationsViewController = UINavigationController(rootViewController: EmptyViewController())
+        let moreViewController = UINavigationController(rootViewController: EmptyViewController())
         
-        vc1.title = "Inicio"
-        vc2.title = "Favoritos"
-        vc3.title = "Compras"
-        vc4.title = "Notificações"
-        vc5.title = "Mais"
+        homeViewController.title = "Inicio"
+        favoritesViewController.title = "Favoritos"
+        shopsViewController.title = "Compras"
+        notificationsViewController.title = "Notificações"
+        moreViewController.title = "Mais"
         
-        tabBarVc.setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: false)
+        tabBarViewController.setViewControllers([homeViewController, favoritesViewController, shopsViewController, notificationsViewController, moreViewController], animated: false)
         
-        guard let items = tabBarVc.tabBar.items else {
+        guard let tabBarItems = tabBarViewController.tabBar.items else {
             return
         }
         
         let images = ["house", "heart", "bag", "bell", "line.3.horizontal"]
-        for x in 0..<items.count{
-            items[x].image = UIImage(systemName: images[x])
+        for itemIndex in 0..<tabBarItems.count{
+            tabBarItems[itemIndex].image = UIImage(systemName: images[itemIndex])
         }
         
         configureTabAndNavBar()
         
-        /// 2. Create a new UIWindow using the windowScene constructor which takes in a window scene.
+        
         let window = UIWindow(windowScene: windowScene)
         
-        /// 3. Create a view hierarchy programmatically
-        let viewController = tabBarVc
-        let navigation = UINavigationController(rootViewController: viewController)
+            
         
         
-        
-        /// 4. Set the root view controller of the window with your view controller
-        window.rootViewController = navigation
+        window.rootViewController = tabBarViewController
 
         self.window = window
         window.makeKeyAndVisible()
